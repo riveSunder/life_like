@@ -22,21 +22,24 @@ CA (Conway's Life) simulation performance with Julia on a 4-core Intel i5-6300U 
 <div align="center">
 <img src="./assets/laptop_carle.png" width=75%>
 <br>
+CA (Conway's Life) simulation performance with Python+PyTorch (<a href="https://github.com/rivesunder/carle">CARLE</a>) on a 4-core Intel i5-6300U CPU.
 </div>
-CA (Conway's Life) simulation performance with Python+PyTorch ([CARLE](https://github.com/rivesunder/carle)) on a 4-core Intel i5-6300U CPU.
+
 <br>
 
 <div align="center">
 <img src="./assets/desktop_julia.png" width=75%>
 <br>
 CA (Conway's Life) simulation performance with Julia on a 24-core AMD Threadripper 3960x CPU.
+<br>
 </div>
 
 <div align="center">
 <img src="./assets/desktop_carle.png" width=75%>
 <br>
+CA (Conway's Life) simulation performance with Python+PyTorch (<a href="https://github.com/rivesunder/carle">CARLE</a>) on a 24-core AMD Threadripper 3960x CPU.
 </div>
-CA (Conway's Life) simulation performance with Python+PyTorch ([CARLE](https://github.com/rivesunder/carle)) on a 24-core AMD Threadripper 3960x CPU.
+
 <br>
 
-In CALRE I used PyTorch's built in convolutions and in Julia I used Fourier transform-based convolutions with `FFTW.jl`. Although `FFTW.jl` has the option to control the number of threads used with `FFTW.set_num_threads`, utilization was never much more than 4 threads and performance actually decreased when set to use more threads in most circumstances. 
+In CARLE I used PyTorch's built in convolutions and in Julia I used Fourier transform-based convolutions with `FFTW.jl`. Although `FFTW.jl` has the option to control the number of threads used with `FFTW.set_num_threads`, utilization was never much more than 4 threads and performance actually decreased when set to use more threads in most circumstances. 
