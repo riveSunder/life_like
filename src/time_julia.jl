@@ -1,5 +1,5 @@
 using Pkg
-Pkg.activate("../life_like")
+Pkg.activate("./life_like")
 include("../src/life_like.jl")
 
 my_cmap = PyPlot.get_cmap("magma")

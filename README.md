@@ -1,6 +1,11 @@
-# Conway's Game of Life in Julia, Speed Test
+# Conway's Game of Life in Julia, NumPy, and PyTorch, execution speeds compared.
 
-## Conway's Game of Life in Julia, NumPy, and PyTorch, execution speeds compared.
+<div align="center">
+<img src="./assets/glider_animation.gif" width=50%>
+<br>
+Glider in Conway's Life used to test simulation performance in Julia and PyTorch
+</div>
+<br>
 
 ### Results
 
@@ -15,17 +20,23 @@
 Table of execution speeds on a 4-core Intel i5-6300U laptop CPU 
 </div>
 
+| grid dimensions | Julia (1 thread)  | Julia (2 threads)  | Julia (4 threads)  |  NumPy  | CARLE       | units        |
+|:---------------:|:-----------------:|:------------------:|:------------------:|:-------:|:-----------:|:------------:|
+| 1024 by 1024    | 6.51              | 12.08              | _16.22_            | 8.98    | **221.64**  | steps/second |
+| 256 by 256      | 159.15            | 172.85             | _210.43_           | 229.16  | **1735.07** | steps/second |
+| 128 by 128      | _1037.14_         | 898.17             | 918.44             | 999.98  | **2722.23** | steps/second |
+| 64 by 64        | _**4839.79**_     | 2722.67            | 2301.78            | 3050.90 | 4437.3      | steps/second |
+
 <div align="center">
-<img src="./assets/glider_animation.gif" width=50%>
-<br>
-Glider in Conway's Life used to test simulation performance in Julia and PyTorch
+Table of execution speeds on a 24-core AMD Threadripper 3960x desktop CPU 
 </div>
-<br>
 
 After fixing a few things in my Julia implementation and upgrading to Python 1.9.0, 
 Don't get me wrong, I know that I could almost certainly speed up my Julia implementation to approach the performance I saw with CARLE, my PyTorch baseline. I look forward to finding both low-hanging fruit and hidden tricks for speeding up cellular automata as I get more familiar with the Julia language. But for now, this current Julia language implementation simulating Life-like cellular automata ranges from about 20% to 20X slower than in the PyTorch implementation, depending on parameters. 
 
 In CARLE I used PyTorch's built in convolutions and in Julia I used Fourier transform-based convolutions with `FFTW.jl`. Although `FFTW.jl` has the option to control the number of threads used with `FFTW.set_num_threads`, utilization was never much more than 4 threads and performance actually decreased when set to use more threads in most circumstances. For a more direct comparison, I also implemented Conway's Life using Fourier transform convolutions in NumPy, which ended up being the slowest implementation. 
+
+### Performance on laptop CPU
 
 <div align="center">
 <img src="./assets/numpy_speed.png" width=75%>
@@ -41,6 +52,26 @@ CA (Conway's Life) simulation performance with Julia and FFTW.jl on a 4-core Int
 
 <div align="center">
 <img src="./assets/carle_speed.png" width=75%>
+<br>
+CA (Conway's Life) simulation performance with Python+PyTorch (<a href="https://github.com/rivesunder/carle">CARLE</a>) on a 4-core Intel i5-6300U CPU.
+</div>
+
+### Performance on desktop CPU
+
+<div align="center">
+<img src="./assets/numpy_speed2.png" width=75%>
+<br>
+CA (Conway's Life) simulation performance with Python+NumPy on a 4-core Intel i5-6300U laptop CPU.
+</div>
+
+<div align="center">
+<img src="./assets/julia_speed2.png" width=75%>
+<br>
+CA (Conway's Life) simulation performance with Julia and FFTW.jl on a 4-core Intel i5-6300U laptop CPU.
+</div>
+
+<div align="center">
+<img src="./assets/carle_speed2.png" width=75%>
 <br>
 CA (Conway's Life) simulation performance with Python+PyTorch (<a href="https://github.com/rivesunder/carle">CARLE</a>) on a 4-core Intel i5-6300U CPU.
 </div>
