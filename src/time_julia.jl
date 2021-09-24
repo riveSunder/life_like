@@ -27,7 +27,7 @@ function timing_script()
             uni.grid[36, 31] = 1
             uni.grid[36, 33] = 1
 
-            for steps = [1, 10, 100, 10000] 
+            for steps = [1, 10, 100, 1000] 
 
 
                 t0 = time_ca_steps(uni, steps)[2]
@@ -52,13 +52,13 @@ seconds = timing_script()
 # plot it up
 
 x = [1, 2, 3, 4]
-y = 10000 ./ seconds[1,:]
+y = 1000 ./ seconds[1,:]
 
 x2 = [1.25, 2.25, 3.25, 4.25]
-y2 = 10000 ./ seconds[2,:]
+y2 = 1000 ./ seconds[2,:]
 
 x3 = [1.5, 2.5, 3.5, 4.5]
-y3 = 10000 ./ seconds[1, :]
+y3 = 1000 ./ seconds[1, :]
 
 
 PyPlot.figure(figsize=(12,4), facecolor="white")
@@ -72,6 +72,7 @@ PyPlot.bar(x3, y3, width=0.25, color=my_cmap(200))
 PyPlot.title("Speed of Life in Julia", fontsize=32)
 PyPlot.ylabel("steps per second", fontsize=22)
 
+PyPlot.tight_layout()
 PyPlot.savefig("./assets/julia_speed.png")
 
 PyPlot.figure(figsize=(8,8))
