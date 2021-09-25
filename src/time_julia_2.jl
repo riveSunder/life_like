@@ -17,7 +17,7 @@ function timing_script()
     bb = 1
 
     for obs_dim = [1024, 256, 128, 64] #, 1024]
-        uni = Universe( [3], [2,3], zeros(obs_dim, obs_dim) )
+        uni = Universe( [3], [2,3], zeros(Float32, obs_dim, obs_dim) )
 
         # build a glider
         uni.grid[34, 32] = 1
@@ -59,7 +59,7 @@ PyPlot.title("nn Speed of Life in Julia", fontsize=32)
 PyPlot.ylabel("steps per second", fontsize=22)
 
 PyPlot.tight_layout()
-PyPlot.savefig("./assets/julia_speed_nnlib.png")
+PyPlot.savefig("./assets/julia_speed_nnlib_amd_float32.png")
 
 PyPlot.figure(figsize=(8,8))
 PyPlot.imshow(my_grid, cmap=my_cmap)

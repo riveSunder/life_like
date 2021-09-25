@@ -7,9 +7,9 @@ pygui(false)
 # universe constructor
 
 mutable struct Universe 
-    born::Array{Int32}
-    live::Array{Int32}
-    grid::Array{Int32, 2}
+    born::Array{Int8}
+    live::Array{Int8}
+    grid::Array{Float32, 2}
 end
 
 # default constructor for CA universe
@@ -19,7 +19,7 @@ Universe() = Universe([3], [2,3], zeros(64,64))
 function circular_pad(grid)
 
     
-    padded = zeros(size(grid)[1]+2, size(grid)[2]+2)
+    padded = zeros(Float32, size(grid)[1]+2, size(grid)[2]+2)
 
     padded[2:end-1, 2:end-1] = grid
     
@@ -50,7 +50,7 @@ end
 function ca_update(grid, rules)
 
     # Moore neighborhood kernel
-    kernel = ones(Int32, 3,3)
+    kernel = ones(Float32, 3,3)
     kernel[2, 2] = 0
     
     moore_grid = nn_convolve(circular_pad(grid), kernel)[2:end-1, 2:end-1]
