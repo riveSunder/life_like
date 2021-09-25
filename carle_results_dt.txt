@@ -1,0 +1,32 @@
+   universe dimension = 1024
+time elapsed for 1 runs of 1steps: 0.004 seconds,261.83 avg. steps/sec.
+   universe dimension = 1024
+time elapsed for 1 runs of 100steps: 0.392 seconds,255.19 avg. steps/sec.
+   universe dimension = 1024
+time elapsed for 1 runs of 1000steps: 3.791 seconds,263.75 avg. steps/sec.
+   universe dimension = 1024
+time elapsed for 1 runs of 10000steps: 42.104 seconds,237.50 avg. steps/sec.
+   universe dimension = 256
+time elapsed for 1 runs of 1steps: 0.001 seconds,1648.70 avg. steps/sec.
+   universe dimension = 256
+time elapsed for 1 runs of 100steps: 0.064 seconds,1559.88 avg. steps/sec.
+   universe dimension = 256
+time elapsed for 1 runs of 1000steps: 0.636 seconds,1572.89 avg. steps/sec.
+   universe dimension = 256
+time elapsed for 1 runs of 10000steps: 6.436 seconds,1553.65 avg. steps/sec.
+   universe dimension = 128
+time elapsed for 1 runs of 1steps: 0.000 seconds,2716.52 avg. steps/sec.
+   universe dimension = 128
+time elapsed for 1 runs of 100steps: 0.035 seconds,2835.81 avg. steps/sec.
+   universe dimension = 128
+time elapsed for 1 runs of 1000steps: 0.338 seconds,2961.82 avg. steps/sec.
+   universe dimension = 128
+time elapsed for 1 runs of 10000steps: 3.399 seconds,2941.93 avg. steps/sec.
+   universe dimension = 64
+time elapsed for 1 runs of 1steps: 0.000 seconds,4236.67 avg. steps/sec.
+   universe dimension = 64
+time elapsed for 1 runs of 100steps: 0.022 seconds,4517.14 avg. steps/sec.
+   universe dimension = 64
+time elapsed for 1 runs of 1000steps: 0.217 seconds,4606.70 avg. steps/sec.
+   universe dimension = 64
+time elapsed for 1 runs of 10000steps: 2.167 seconds,4614.82 avg. steps/sec.

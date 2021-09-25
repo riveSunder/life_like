@@ -1,0 +1,33 @@
+1024 obs_dim
+1 steps in 1.583037007 seconds, 0.6316971716884191 steps/second 
+1024 obs_dim
+10 steps in 0.19751907 seconds, 50.628022904320076 steps/second 
+1024 obs_dim
+100 steps in 1.911764682 seconds, 52.3076929611361 steps/second 
+1024 obs_dim
+1000 steps in 19.12684909 seconds, 52.28252679228934 steps/second 
+256 obs_dim
+1 steps in 0.000671162 seconds, 1489.9532452671635 steps/second 
+256 obs_dim
+10 steps in 0.009800249 seconds, 1020.3822372268296 steps/second 
+256 obs_dim
+100 steps in 0.111798251 seconds, 894.4683758961488 steps/second 
+256 obs_dim
+1000 steps in 1.072107956 seconds, 932.7418889147764 steps/second 
+128 obs_dim
+1 steps in 0.003646631 seconds, 274.22571683287947 steps/second 
+128 obs_dim
+10 steps in 0.003620955 seconds, 2761.7023685740364 steps/second 
+128 obs_dim
+100 steps in 0.031359536 seconds, 3188.822691764317 steps/second 
+128 obs_dim
+1000 steps in 0.235352389 seconds, 4248.947734284525 steps/second 
+64 obs_dim
+1 steps in 7.5702e-5 seconds, 13209.690629045468 steps/second 
+64 obs_dim
+10 steps in 0.000736034 seconds, 13586.328892415297 steps/second 
+64 obs_dim
+100 steps in 0.007289979 seconds, 13717.460640147248 steps/second 
+64 obs_dim
+1000 steps in 0.079270216 seconds, 12615.078530882267 steps/second 
+[1.583037007 0.19751907 1.911764682 19.12684909; 0.000671162 0.009800249 0.111798251 1.072107956; 0.003646631 0.003620955 0.031359536 0.235352389; 7.5702e-5 0.000736034 0.007289979 0.079270216]
